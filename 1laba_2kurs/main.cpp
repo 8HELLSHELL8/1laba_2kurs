@@ -286,7 +286,6 @@ void process_command(const user_command& cmd, const string& name_file)
 
         if (cmd.command == "TADD") 
         {
-            treeInstance.save_new_element_to_file(name_file, startingValue);
             treeInstance.load_from_file(name_file);
             treeInstance.Add(stoi(cmd.value_fir));
             treeInstance.save_new_element_to_file(name_file, stoi(cmd.value_fir));
