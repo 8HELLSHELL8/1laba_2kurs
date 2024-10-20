@@ -2,7 +2,7 @@
 #include "library.h"
 
 template <typename T>
-struct Myvector 
+struct ARRAY 
 {
 private:
 
@@ -12,14 +12,14 @@ private:
 
 public:
 
-    Myvector() 
+    ARRAY() 
     {
         arr = new T[1];
         size_of_Vec = 0;
         memory_size = 1;
     }
 
-    Myvector(const Myvector& other) 
+    ARRAY(const ARRAY& other) 
     {
         size_of_Vec = other.size_of_Vec;
         memory_size = other.memory_size;
@@ -30,7 +30,7 @@ public:
         }
     }
 
-    Myvector<T>& operator=(const Myvector& other) 
+    ARRAY<T>& operator=(const ARRAY& other) 
     {
         if (this != &other) 
         { 
@@ -46,7 +46,7 @@ public:
         return *this;
     }
 
-    ~Myvector() 
+    ~ARRAY() 
     {
         delete[] arr;
     }                            

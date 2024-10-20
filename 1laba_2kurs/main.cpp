@@ -1,4 +1,4 @@
-#include "massive_vec.h"
+#include "Array.h"
 #include "ForwardList.h"
 #include "LinkedList.h"
 #include "Queue.h"
@@ -401,7 +401,7 @@ void process_command(const user_command& cmd, const string& name_file)
     } 
     else if (cmd.name_structure == "MASSIVE") 
     {
-        Myvector<string> vector; 
+        ARRAY<string> vector; 
         if (cmd.command == "MPUSH") 
         {
             vector.load_from_file(name_file);  
