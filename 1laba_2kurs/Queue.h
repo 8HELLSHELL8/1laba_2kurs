@@ -1,5 +1,5 @@
 #pragma once
-#include "massive_vec.h"
+#include "DynamicArray.h"
 
 struct QUEUE 
 {
@@ -89,7 +89,7 @@ public:
     void save_to_file(const string& filename, const string& name_structure) const 
     {
         ifstream read_file(filename);
-        Myvector<string> lines;  
+        DynamicArray<string> lines;  
         string line;
         bool structure_found = false;
 

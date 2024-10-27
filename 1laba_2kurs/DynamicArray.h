@@ -2,7 +2,7 @@
 #include "library.h"
 
 template <typename T>
-struct Myvector 
+struct DynamicArray 
 {
 private:
 
@@ -12,14 +12,14 @@ private:
 
 public:
 
-    Myvector() 
+    DynamicArray() 
     {
         arr = new T[1];
         size_of_Vec = 0;
         memory_size = 1;
     }  
 
-    Myvector(const Myvector& other) 
+    DynamicArray(const Myvector& other) 
     {
         size_of_Vec = other.size_of_Vec;
         memory_size = other.memory_size;
@@ -30,7 +30,7 @@ public:
         }
     }   
 
-    Myvector(initializer_list<T> init_list) 
+    DynamicArray(initializer_list<T> init_list) 
     {
         size_of_Vec = init_list.size();  // Размер массива соответствует количеству элементов
         memory_size = size_of_Vec * 2;  
@@ -43,7 +43,7 @@ public:
         }
     }
 
-    Myvector<T>& operator=(const Myvector& other) 
+    DynamicArray<T>& operator=(const Myvector& other) 
     {
         if (this != &other) 
         { // Don't we assign the object to ourselves
@@ -59,7 +59,7 @@ public:
         return *this;
     }
     
-    ~Myvector() 
+    ~DynamicArray() 
     {
         delete[] arr;
     }                            

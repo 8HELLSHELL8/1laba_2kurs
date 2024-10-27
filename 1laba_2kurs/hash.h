@@ -1,5 +1,5 @@
 #pragma once
-#include "massive_vec.h"
+#include "DynamicArray.h"
 
 
 using namespace std;
@@ -203,7 +203,7 @@ public:
     {
         // Читаем существующие данные из файла
         ifstream read_file(filename);
-        Myvector<string> lines;
+        DynamicArray<string> lines;
         string line;
         bool structure_found = false;
 

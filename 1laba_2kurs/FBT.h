@@ -1,5 +1,5 @@
 #pragma once
-#include "massive_vec.h"
+#include "DynamicArray.h"
 
 
 struct node 
@@ -315,7 +315,7 @@ public:
     {
 
         ifstream read_file(filename);
-        Myvector<string> lines; // Используем вектор для хранения строк
+        DynamicArray<string> lines; // Используем вектор для хранения строк
         string line;
         bool structure_found = false;
 
